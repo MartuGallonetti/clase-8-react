@@ -1,13 +1,15 @@
 import NavBar from "../components/NavBar"
 import ItemListContainer from "../components/ItemListContainer"
-import CartWidget from "../components/CartWidget"
+import ItemDetailContainer from "../components/ItemDetailContainer"
+import ItemCount from "../components/ItemCount"
 
 function App() {
   return ( 
     <>
     <NavBar />
     <ItemListContainer greeting= "Nuestro productos" />
-    <CartWidget/>
+    <ItemDetailContainer/>
+    <ItemCount/>
     </>
   )
 }
