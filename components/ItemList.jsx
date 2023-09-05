@@ -6,22 +6,22 @@ import { useEffect, useState } from "react";
 import Item from "./Item";
 
 
-function obtenerProductos () {
-    return new Promise ((respuesta) => {
-        setTimeout (() => {respuesta (productos);
+function getProducts () {
+    return new Promise ((res) => {
+        setTimeout (() => {res (products);
         }, 2000)
     })
 }
 
 export default function ItemList () {
-    const [productos, setProductos] = useState ([]);
+    const [products, setProducts] = useState ([]);
     const [loading, setLoading] = useState (true)
 
     if (loading === true) return <p>Cargando...</p>
 // mandamos un array vacio para que solo se renderice una vez.
     useEffect (() =>{
-        obtenerProductos().then ((data) => {
-            setProductos(data);
+        getProducts().then ((data) => {
+            setProducts(data);
             setLoading (false)
         })
     }, []);
@@ -37,8 +37,8 @@ export default function ItemList () {
 // el producto entero "productos"
     return (
         <div className="item-list">
-            {productos.map ((productos) => (
-                <Item key= {productos.id} productos = {productos} />
+            {products.map ((products) => (
+                <Item key= {products.id} products = {products} />
             ))}
         </div>
     ) 

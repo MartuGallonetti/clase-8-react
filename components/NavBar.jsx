@@ -1,4 +1,4 @@
-import CartWidget from '../public/vite.svg'
+import CartWidget from '../src/vite.svg'
 
 export default function NavBar () {
     return (

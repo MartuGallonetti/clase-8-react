@@ -1,9 +1,9 @@
-export default function Item ({productos}) {
+export default function Item ({products}) {
     return (
         <div>
-            <img src= {productos.imagen} alt="" />
-            <h2>{productos.titulo}</h2>
-            <p>{productos.precio}</p>
+            < img src= {products.imagen} alt="" />
+            <h2>{products.titulo}</h2>
+            <p>{products.precio}</p>
         </div>
     )
 }
